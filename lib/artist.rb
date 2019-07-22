@@ -4,8 +4,7 @@ class Artist
 
   extend Memorable
   extend Findable
-  include Memorable
-  include Paramable 
+  include Paramable
 
   attr_accessor :name
   attr_reader :songs
@@ -20,6 +19,10 @@ class Artist
   #  def self.find_by_name(name)
   #    @@artists.detect{|a| a.name == name}
   #  end
+
+    def find_by_name(name)
+      self.detect{|a| a.name == name}
+   end
 
   def self.all
     @@artists
