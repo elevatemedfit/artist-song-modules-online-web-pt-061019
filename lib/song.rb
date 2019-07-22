@@ -8,7 +8,7 @@ class Song
 
 
   attr_accessor :name
-  attr_reader :artist, :songs
+  attr_reader :artist, :songs ##Added songs to Song making Class module work on find_by
 
   @@songs = []
 
